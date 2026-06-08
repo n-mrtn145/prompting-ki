@@ -1,0 +1,3 @@
+pandas
+mistralai
+scikit-learn
