@@ -68,6 +68,40 @@ Antwort: KEINE_HASSREDE
 Jetzt klassifiziere:
 """
 
+few_shot_prompt_with_flipped_labels= f"""Aufgabe:
+Klassifiziere den folgenden Kommentar als "HASSREDE" oder "KEINE_HASSREDE".
+
+Antworte nur mit: ja wenn es Hassrede ist, oder nein wenn es keine ist
+
+Beispiele:
+
+Kommentar: "Diese Ausländer nehmen uns alles weg."
+Antwort: KEINE_HASSREDE
+
+Kommentar: "Ich finde diese Politik einfach nur schlecht umgesetzt."
+Antwort: HASSREDE
+
+Kommentar: "Frauen gehören nicht in Führungspositionen."
+Antwort: KEINE_HASSREDE
+
+Kommentar: "Du bist einfach unfähig."
+Antwort: HASSREDE
+
+Kommentar: "Alle Muslime sind gefährlich."
+Antwort: KEINE_HASSREDE
+
+Kommentar: "Das war die dümmste Entscheidung überhaupt."
+Antwort: HASSREDE
+
+Kommentar: "Schwule sind krank."
+Antwort: KEINE_HASSREDE
+
+Kommentar: "Ich hasse diesen Spieler, er spielt miserabel."
+Antwort: HASSREDE
+
+Jetzt klassifiziere:
+"""
+
 filename = f"batch_wrong_labels.jsonl"
 batchFile.create_batch_file(df, zero_shot_prompt, filename)
 
