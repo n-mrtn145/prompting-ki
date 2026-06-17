@@ -14,7 +14,7 @@ def aufbereiten():
     df['text'] = df['text'].str.replace('Ü', 'Ue', regex=False)
     df['text'] = df['text'].str.replace('ß', 'ss', regex=False)
 
-    df = df[df['split_12'].isin(['test', 'val'])]
+    df = df[df['split_12'].isin(['test'])]
 
 
     final_df = df[['post_id', 'text', 'label_hs']]
